@@ -11,7 +11,7 @@
     <div class="wrapper">
       <div class="header">Test JSON page</div>
       <!-- <button class="button" onclick="loadData()">Load Some JSON</button> -->
-      <button class="button" onclick="console.log('You haven\'t written a function yet!');">Click me to replace list entries</button>
+      <button class="button" onclick="aki()">Click me to replace list entries</button>
       <div class="content">
         <ul class="instructions">
           <li>Delete and re-clone the class repository</li>
@@ -33,6 +33,7 @@
   </div>
   <script>
     /* N.B. - For your lab, use the variable "countries" now available on the window space */
+
     const countries = [
       { "name": "Afghanistan", "code": "AF" },
       { "name": "Åland Islands", "code": "AX" },
@@ -278,7 +279,28 @@
       { "name": "Zambia", "code": "ZM" },
       { "name": "Zimbabwe", "code": "ZW" }
     ]
-    console.log("List of countries in the world", countries);
+
+    function aki() {
+      for(i = 0; i < countries.length; i++) {
+        const currentName = countries[i].name;
+        countries[i] = currentName;
+      }
+    //  console.log(countries);
+
+      for(i = 0; i < 50; i++) {
+        const randomCountry = countries[Math.floor(Math.random() * 243)];
+        console.log(randomCountry);
+      }
+
+    }
+
+    //for loop that runs 50 iterations, random index of the country to print
+
+
+
+    
+
+    //console.log("List of countries in the world", countries);
   </script>
 </body>
 
